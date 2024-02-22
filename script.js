@@ -2,9 +2,9 @@ function tocar_play(idElementoAudio) {
     document.querySelector(idElementoAudio).play();
 }
 const listaDeTeclas = document.querySelectorAll('.tecla');
-let contador = 0;
+
 //enquanto
-while (contador < listaDeTeclas.length) {
+for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     const tecla = listaDeTeclas[contador];
     const instrumento = tecla.classList[1];
     //tamplate string
@@ -12,7 +12,7 @@ while (contador < listaDeTeclas.length) {
     tecla.onclick = function () {
         tocar_play(idAudio);
     }
-    contador = contador + 1;
+
 }
 
 
