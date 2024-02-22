@@ -8,12 +8,13 @@ while (contador < listaDeTeclas.length) {
     const tecla = listaDeTeclas[contador];
     const instrumento = tecla.classList[1];
     //tamplate string
-    const idAudio = '#som_${instrmento}';
+    const idAudio = `#som_${instrumento}`;
     tecla.onclick = function () {
         tocar_play(idAudio);
     }
+    contador = contador + 1;
 }
-contador = contador + 1;
+
 
 
 
