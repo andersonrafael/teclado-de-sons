@@ -1,12 +1,12 @@
-function tocar_play() {
-    document.querySelector('#som_tecla_clap').play();
+function tocar_play(idElementoAudio) {
+    document.querySelector(idElementoAudio).play();
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
 let contador = 0;
 //enquanto
-while (contador < 8) {
+while (contador < listaDeTeclas.length) {
     listaDeTeclas[contador].onclick = tocar_play;
     contador = contador + 1;
     console.log(contador);
